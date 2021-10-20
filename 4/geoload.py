@@ -6,7 +6,7 @@ import time
 import ssl
 import sys
 
-# api_key = False
+
 # Enter Google Places API key
 api_key = ''
 
@@ -48,7 +48,7 @@ for line in fh:
 
     parms = dict()
     parms["address"] = address
-    if api_key is not False: parms['key'] = api_key
+    parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
 
     print('Retrieving', url)
